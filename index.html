@@ -9,30 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-primary: '#FF3B30',
-secondary: '#333333'
-},
-borderRadius: {
-'none': '0px',
-'sm': '4px',
-DEFAULT: '8px',
-'md': '12px',
-'lg': '16px',
-'xl': '20px',
-'2xl': '24px',
-'3xl': '32px',
-'full': '9999px',
-'button': '8px'
-}
-}
-}
-}
-</script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#000000',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
 <style>
 :where([class^="ri-"])::before { content: "\f3c2"; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
@@ -124,7 +101,7 @@ class="absolute right-[-30px] top-0 h-full object-cover" alt="강사 이미지">
 </div>
 </div>
 </div>
-<button class="w-full bg-primary text-white py-3 rounded-button font-medium mb-3">수강 신청하기</button>
+<button class="w-full bg-orange-500 text-white py-3 rounded-button font-medium mb-6 text-2xl">수강 신청하기</button>
 <div class="mb-4">
 <div class="flex items-center justify-between cursor-pointer" id="schoolWebsite">
 <div>
@@ -139,7 +116,7 @@ class="absolute right-[-30px] top-0 h-full object-cover" alt="강사 이미지">
 <p>• 1:1 맞춤형 창직 코칭</p>
 <p>• 그룹 코칭 프로그램</p>
 <p>• 온라인 강의 및 워크샵</p>
-<p>• 창직 관련 교육 자료</p>
+<p></p>
 <p>• 창직 성공 사례 공유</p>
 </div>
 <a href="https://macarthurschool.com" class="block w-full text-center py-3 border border-primary text-primary rounded-button font-medium">홈페이지 방문하기</a>
@@ -147,10 +124,10 @@ class="absolute right-[-30px] top-0 h-full object-cover" alt="강사 이미지">
 </div>
 <script>
 document.getElementById('schoolWebsite').addEventListener('click', function() {
-    const detail = document.getElementById('websiteDetail');
-    const arrow = document.getElementById('websiteArrow');
-    detail.classList.toggle('hidden');
-    arrow.style.transform = detail.classList.contains('hidden') ? '' : 'rotate(180deg)';
+const detail = document.getElementById('websiteDetail');
+const arrow = document.getElementById('websiteArrow');
+detail.classList.toggle('hidden');
+arrow.style.transform = detail.classList.contains('hidden') ? '' : 'rotate(180deg)';
 });
 </script>
 </div>
