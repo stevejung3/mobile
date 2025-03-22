@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375px, initial-scale=1.0">
+<title>수강신청</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#FF3B30',
+secondary: '#333333'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+.nav-height { height: 56px; }
+.tab-height { height: 64px; }
+.content-area {
+margin-top: 56px;
+min-height: calc(100vh - 56px);
+}
+</style>
+</head>
+<body class="bg-white">
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50 nav-height">
+<div class="flex items-center justify-between px-4 h-full">
+<img src="https://static.readdy.ai/image/e5f41e75572b2cd6691983cc7dea2fc9/56087a11bb87f4d3aae21e5c7290f402.png" alt="logo" class="h-8">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</div>
+</div>
+</nav>
+<div class="content-area">
+<div class="relative h-[280px] bg-secondary overflow-hidden">
+<div class="absolute inset-0 flex flex-col justify-center px-6 text-white z-10">
+<h1 class="text-3xl font-bold mb-3">너는 평생<br>뭐하고 살래?</h1>
+<p class="text-sm opacity-90">나만의 평생 직업을<br>찾을 수 있도록 도와드립니다</p>
+</div>
+<img src="https://static.readdy.ai/image/e5f41e75572b2cd6691983cc7dea2fc9/8bc03d9bb4b376b3d4901942e2b26cfe.png"
+class="absolute right-[-30px] top-0 h-full object-cover" alt="강사 이미지">
+</div>
+<div class="px-4 py-6">
+<div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+<div class="flex items-center justify-between mb-4 cursor-pointer" id="coachProfile">
+<div>
+<h3 class="font-bold text-lg">코치 정은상</h3>
+<p class="text-sm text-gray-600">커리어 & 라이프 코칭 전문가</p>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform" id="profileArrow"></i>
+</div>
+<div class="hidden mb-4 text-sm leading-relaxed text-gray-600" id="profileDetail">
+<p class="mb-3">지난 13년간 저는 평생직업을 찾고자 하시는 550여 분을 1:1 또는 그룹으로 코칭해 왔습니다. 그 과정에서 창직은 말보다 실천이 중요하다는 사실을 깊이 깨달았습니다. "창직하겠습니다"라고 먼저 선언하고, 꾸준히 배우고 익히며 창직의 길에 들어서는 것이 핵심입니다.</p>
+<p class="mb-3">과학기술과 AI의 급속한 발전으로 평생직장은 이미 사라졌고, 이제는 스스로 직업을 만들어야 하는 시대가 되었습니다. 저는 46세에 퇴직한 후 다양한 직업을 경험하며 세상을 배웠고, 스마트폰이 국내에 처음 도입되던 시기에 모바일 기술을 익혀 백세시대에 걸맞은 삶을 설계할 수 있었습니다.</p>
+<p class="mb-3">그 후 창직학교 '맥아더스쿨'을 설립하여 강연과 칼럼 활동을 이어가며 창직 전문가로 활동해 왔습니다. 서울시 50플러스재단과 장충중학교에서는 창직 관련 교육을 지속적으로 진행했습니다.</p>
+<p class="mb-3">2020년 코로나19 이후에는 Zoom을 선제적으로 익혀 교수님들과 강사님들을 대상으로 비대면 강의와 코칭을 진행하였고, 관련 실용서를 공동 집필하기도 했습니다.</p>
+<p>주요 저서로는 『너는 평생 뭐하고 살래』, 『창직하라 평생직업』, 『창직이 답이다』, 『마법의 코칭』 등이 있습니다.</p>
+</div>
+<div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-3 rounded mb-4">
+<div class="flex items-center justify-between cursor-pointer" id="coachingContent">
+<h4 class="font-medium">코칭 내용</h4>
+<i class="ri-arrow-down-s-line text-xl transition-transform" id="contentArrow"></i>
+</div>
+<div class="hidden mt-3 text-sm leading-relaxed" id="contentDetail">
+<p class="mb-3">코칭은 맞춤식 코칭입니다. 다만 아래 내용을 포함해서 개인에게 맞춰 코칭합니다.</p>
+<div class="space-y-4">
+<div>
+<h5 class="font-medium mb-1">AI</h5>
+<p>Perplexity, 챗GPT, Grok3, 구글 Gemini, MS 코파일럿, Naver 클로바 X 등</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">글쓰기/책쓰기</h5>
+<p>독서와 글쓰기 방법</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">Personal Branding</h5>
+<p>내 안에 잠든 잠재력 발굴해서 자신의 브랜드 만들기</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">ZOOM</h5>
+<p>활용법</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">Facebook & Instagram</h5>
+<p>친구관리, 그룹운영, 이벤트 만들기, 페이지 만들기 및 운영, 페이스북 마케팅, 글쓰기, 메신저 활용, 해시태그 및 태그 사용법, 댓글 및 공유하기 등</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">Google</h5>
+<p>구글 드라이브, 구글 양식 만들기, 구글 문서/프리젠테이션/스프레드시트 활용법, 링크주소 단축하기, 크롬 사용법, gmail 사용법, 행아웃 및 구글 플러스 사용법, 구글 검색, 구글 일정 사용법, 구글 웹 앱 설치 및 사용법 등</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">Smartphone</h5>
+<p>검색, wifi 활용, 핫스팟 및 테더링 활용, 프리젠테이션 하기, 이메일 보내기, 사진 찍기 및 편집하기 등</p>
+</div>
+<div>
+<h5 class="font-medium mb-1">그외 Tools</h5>
+<p>뉴스레터 작성, 구글, 모바일 명함, 라인 카메라, twitter(X), powerpoint, youtube 동영상 제작 및 편집하기 등</p>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-button font-medium">수강 신청하기</button>
+</div>
+</div>
+</div>
+<script>
+document.querySelector('button').addEventListener('click', function() {
+window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScig5IZvV7_8ZI6nZ5E3OlfUMhSGh0BZHYMSgFTG0uFcmtK2Q/viewform';
+});
+document.getElementById('coachProfile').addEventListener('click', function() {
+const detail = document.getElementById('profileDetail');
+const arrow = document.getElementById('profileArrow');
+detail.classList.toggle('hidden');
+arrow.style.transform = detail.classList.contains('hidden') ? '' : 'rotate(180deg)';
+});
+document.getElementById('coachingContent').addEventListener('click', function() {
+const detail = document.getElementById('contentDetail');
+const arrow = document.getElementById('contentArrow');
+detail.classList.toggle('hidden');
+arrow.style.transform = detail.classList.contains('hidden') ? '' : 'rotate(180deg)';
+});
+</script>
+</body>
+</html>
