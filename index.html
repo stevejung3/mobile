@@ -124,7 +124,35 @@ class="absolute right-[-30px] top-0 h-full object-cover" alt="강사 이미지">
 </div>
 </div>
 </div>
-<button class="w-full bg-primary text-white py-3 rounded-button font-medium">수강 신청하기</button>
+<button class="w-full bg-primary text-white py-3 rounded-button font-medium mb-3">수강 신청하기</button>
+<div class="mb-4">
+<div class="flex items-center justify-between cursor-pointer" id="schoolWebsite">
+<div>
+<h3 class="font-bold text-lg">맥아더스쿨 홈페이지</h3>
+<p class="text-sm text-gray-600">창직학교 소개 및 프로그램</p>
+</div>
+<i class="ri-arrow-down-s-line text-xl transition-transform" id="websiteArrow"></i>
+</div>
+<div class="hidden mt-4 text-sm leading-relaxed text-gray-600" id="websiteDetail">
+<p class="mb-3">맥아더스쿨은 창직 전문 교육기관으로, 다음과 같은 프로그램을 제공합니다:</p>
+<div class="space-y-2 mb-4">
+<p>• 1:1 맞춤형 창직 코칭</p>
+<p>• 그룹 코칭 프로그램</p>
+<p>• 온라인 강의 및 워크샵</p>
+<p>• 창직 관련 교육 자료</p>
+<p>• 창직 성공 사례 공유</p>
+</div>
+<a href="https://macarthurschool.com" class="block w-full text-center py-3 border border-primary text-primary rounded-button font-medium">홈페이지 방문하기</a>
+</div>
+</div>
+<script>
+document.getElementById('schoolWebsite').addEventListener('click', function() {
+    const detail = document.getElementById('websiteDetail');
+    const arrow = document.getElementById('websiteArrow');
+    detail.classList.toggle('hidden');
+    arrow.style.transform = detail.classList.contains('hidden') ? '' : 'rotate(180deg)';
+});
+</script>
 </div>
 </div>
 </div>
